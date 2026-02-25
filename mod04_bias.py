@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 seed = 2724
 
-DF_PATH = "mod04_data/sample.csv"
+DF_PATH = "mod05_data/sample.csv"
 df = pd.read_csv(DF_PATH)
 
 X = df[["income", "education_years", "zipcode_score"]]
