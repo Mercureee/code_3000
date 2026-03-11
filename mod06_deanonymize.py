@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 def load_data(anonymized_path, auxiliary_path):
     """
     Load anonymized and auxiliary datasets.
@@ -26,7 +25,7 @@ def link_records(anon_df, aux_df):
     unique_matches = matches.drop_duplicates(subset=qids, keep=False)
 
     unique_matches = unique_matches.rename(columns={'name': 'matched_name'})
-    return unique_matches[['anon_id', 'matched_name']]
+    return unique_matches[['anon_id', 'matched_name']].reset_index(drop=True)
 
 
 def deanonymization_rate(matches_df, anon_df):
